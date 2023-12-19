@@ -1,0 +1,56 @@
+time_A = 0
+time_B = 0
+time_C = 0
+time_D = 0
+time_E = 0
+Branco = 0
+
+opcoes = {
+    1: "Time A",
+    2: "Time B",
+    3: "Time C",
+    4: "Time D",
+    5: "Time E",
+    6: "Branco ou Nulo"
+}
+num_eleitores = int(input("Coloque o número de eleitores: "))
+for i in range(num_eleitores):
+    print(f"\nEleitor {i+1}, por favor escolha uma opção:")
+    for chave, valor in opcoes.items():
+        print(f"{chave} - {valor}")
+    voto = int(input("Qual o seu voto: "))
+    if voto == 1:
+        time_A += 1
+    elif voto == 2:
+        time_B += 1
+    elif voto == 3:
+        time_C += 1
+    elif voto == 4:
+        time_D += 1
+    elif voto == 5:
+        time_E += 1
+    elif voto == 6:
+        Branco += 1
+    else:
+        print("Opção invalida. Tente novamente.")
+        continue
+
+total_votos = time_A + time_B + time_C + time_D + time_E + Branco
+
+time_a_porcentagem = (time_A / total_votos) * 100
+time_b_porcentagem = (time_B / total_votos) * 100
+time_c_porcentagem = (time_C / total_votos) * 100
+time_d_porcentagem = (time_D / total_votos) * 100
+time_e_porcentagem = (time_E / total_votos) * 100
+branco_porcentagem = (Branco / total_votos) * 100
+
+print("\n\n")
+print("RESULTADO DAS ELEIÇÕES")
+print("------------------------------------------")
+print(f"Total de votos: {total_votos}")
+print(f"Time A: {time_A} votos ({time_a_porcentagem:.2f}%)")
+print(f"Time B: {time_B} votos ({time_b_porcentagem:.2f}%)")
+print(f"Time C: {time_C} votos ({time_c_porcentagem:.2f}%)")
+print(f"Time D: {time_D} votos ({time_d_porcentagem:.2f}%)")
+print(f"Time E: {time_E} votos ({time_e_porcentagem:.2f}%)")
+print(f"Brancos e nulos: {Branco} votos ({branco_porcentagem:.2f}%)")
