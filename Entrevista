@@ -1,0 +1,22 @@
+qtd = int(input("Quantas pessoas serão entrevistadas ?"))
+contador = 1
+soma = 0
+maior = 0
+menor = 0
+while contador <= qtd:
+    nome = input("Qual o seu nome? ")
+    idade = int(input("Qual a sua idade? "))
+    if contador == 1:
+        maior = idade
+        menor = idade
+    soma = soma + idade
+    contador += 1
+    if idade > maior:
+        maior = idade
+    if idade < menor:
+        menor = idade
+print("Quantidade de entrevistados: ",qtd)
+print("A média das idades é de :",soma / qtd)
+print("A maior idade é: ", maior)
+print("A menor idade é: ", menor)
+print("Fim do programa")
