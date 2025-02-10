@@ -1,0 +1,15 @@
+def verificar_hora():
+    entrada = input("Que horas são? ")
+
+    try:
+        numero = int(entrada)
+        numero <= 23 
+        if numero <= 11:
+            print(f'São {numero} horas então Bom dia!!!')
+        elif numero <= 17 and numero > 11:
+            print(f'São {numero} horas então Boa tarde!!!')
+        else:
+            print(f'São {numero} horas então Boa noite!!!')
+    except ValueError:
+        print('Esta não é uma hora valida!')
+verificar_hora()
